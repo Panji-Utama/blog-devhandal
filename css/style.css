@@ -1,0 +1,90 @@
+:root {
+  --color-primary: #040e16;
+  --color-secondary: #b2dde1;
+  --color-accent: rgb(12, 33, 49);
+  --color-fourth: #002c3d;
+}
+
+body {
+  font-family: "Ubuntu", sans-serif;
+  background-color: var(--color-primary);
+  color: var(--color-secondary);
+}
+
+#navbar {
+  font-weight: 700;
+  font-size: 30px;
+  background-color: var(--color-fourth);
+  text-align: center;
+  padding: 15px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  transition: background-color 0.3s;
+  z-index: 1000;
+}
+
+.navbar-scrolled {
+  background-color: var(--color-light-brown);
+  color: var(--color-dark-green);
+}
+
+/* Content to enable scrolling */
+.content {
+  margin: 100px 0; /* Space for the navbar */
+  height: auto;
+  padding: 0 10px; /* Padding for small screens */
+  text-align: justify;
+  border: solid 1px var(--color-fourth);
+  border-radius: 10px;
+  margin-left: 10vw;
+  margin-right: 10vw;
+  box-shadow: var(--color-accent) 0px 19px 38px,
+    var(--color-accent) 0px 15px 12px;
+}
+
+.content-items {
+    padding: 50px;
+}
+
+.content-items img {
+  height: 600px;
+  width: 600px;
+  padding: 2em 0;
+}
+
+.content-items h2 {
+    padding-top: 50px;
+}
+
+/* Scrollbar */
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-light-brown);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-secondary);
+}
+
+/* Responsive design for tablets */
+@media (max-width: 768px) {
+  .content {
+    padding: 0 20px;
+  }
+}
+
+/* Responsive design for mobile phones */
+@media (max-width: 480px) {
+  .content {
+    padding: 0 30px;
+  }
+
+  #navbar {
+    padding: 10px;
+  }
+}
